@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴泓锐 - SEO专家 | 数字营销顾问</title>
+    <meta name="description" content="10年+百度SEO推广经验，网站优化专家，AI工具自媒体运营达人，全网粉丝15万+">
+    <meta name="keywords" content="SEO优化,网络推广,数字营销,AI工具,自媒体运营">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --background-secondary: rgba(255, 255, 255, 0.1);
+            --foreground: #ffffff;
+            --foreground-secondary: rgba(255, 255, 255, 0.8);
+            --foreground-muted: rgba(255, 255, 255, 0.6);
+            --accent: #00d4ff;
+            --accent-secondary: #ff6b6b;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --card-border: rgba(255, 255, 255, 0.2);
+            --shadow: rgba(0, 0, 0, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                --background-secondary: rgba(0, 0, 0, 0.02);
+                --foreground: #1a202c;
+                --foreground-secondary: rgba(26, 32, 44, 0.8);
+                --foreground-muted: rgba(26, 32, 44, 0.6);
+                --accent: #3182ce;
+                --accent-secondary: #e53e3e;
+                --card-bg: rgba(255, 255, 255, 0.8);
+                --card-border: rgba(0, 0, 0, 0.1);
+                --shadow: rgba(0, 0, 0, 0.1);
+                --glass-bg: rgba(255, 255, 255, 0.8);
+                --glass-border: rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--background);
+            background-attachment: fixed;
+            color: var(--foreground);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* 现代化玻璃效果卡片 */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* 现代化按钮 */
+        .modern-button {
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 32px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .modern-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .modern-button:hover::before {
+            left: 100%;
+        }
+
+        .modern-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        /* 技能标签 */
+        .skill-tag {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 4px;
+        }
+
+        .skill-tag:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        /* 动画效果 */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* 背景粒子效果 */
+        .particle {
+            position: absolute;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 20s linear infinite;
+        }
+
+        .particle:nth-child(1) { width: 4px; height: 4px; left: 10%; animation-delay: 0s; top: 20%; }
+        .particle:nth-child(2) { width: 6px; height: 6px; left: 20%; animation-delay: -5s; top: 60%; }
+        .particle:nth-child(3) { width: 3px; height: 3px; left: 30%; animation-delay: -10s; top: 80%; }
+        .particle:nth-child(4) { width: 5px; height: 5px; left: 40%; animation-delay: -15s; top: 30%; }
+        .particle:nth-child(5) { width: 2px; height: 2px; left: 50%; animation-delay: -20s; top: 70%; }
+        .particle:nth-child(6) { width: 4px; height: 4px; left: 60%; animation-delay: -25s; top: 40%; }
+        .particle:nth-child(7) { width: 3px; height: 3px; left: 70%; animation-delay: -30s; top: 90%; }
+        .particle:nth-child(8) { width: 6px; height: 6px; left: 80%; animation-delay: -35s; top: 50%; }
+        .particle:nth-child(9) { width: 4px; height: 4px; left: 90%; animation-delay: -40s; top: 10%; }
+
+        /* 实用工具类 */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .text-center { text-align: center; }
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .grid { display: grid; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mb-16 { margin-bottom: 4rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .p-8 { padding: 2rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .pt-4 { padding-top: 1rem; }
+        .min-h-screen { min-height: 100vh; }
+        .relative { position: relative; }
+        .fixed { position: fixed; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-10 { z-index: 10; }
+        .overflow-hidden { overflow: hidden; }
+        .rounded-full { border-radius: 9999px; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .w-32 { width: 8rem; }
+        .h-32 { height: 8rem; }
+        .w-20 { width: 5rem; }
+        .h-20 { height: 5rem; }
+        .w-16 { width: 4rem; }
+        .h-16 { height: 4rem; }
+        .w-full { width: 100%; }
+        .h-full { height: 100%; }
+        .h-px { height: 1px; }
+        .max-w-2xl { max-width: 42rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-6xl { max-width: 72rem; }
+        .object-cover { object-fit: container; }
+        .font-light { font-weight: 300; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-mono { font-family: 'Monaco', 'Menlo', monospace; }
+        .text-sm { font-size: 0.875rem; }
+        .text-base { font-size: 1rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-3xl { font-size: 1.875rem; }
+        .text-4xl { font-size: 2.25rem; }
+        .text-5xl { font-size: 3rem; }
+        .text-6xl { font-size: 3.75rem; }
+        .text-7xl { font-size: 4.5rem; }
+        .leading-relaxed { line-height: 1.625; }
+        .pointer-events-none { pointer-events: none; }
+
+        /* 颜色和渐变 */
+        .text-accent { color: var(--accent); }
+        .text-foreground-secondary { color: var(--foreground-secondary); }
+        .text-foreground-muted { color: var(--foreground-muted); }
+        .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+        .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+        .from-accent { --tw-gradient-from: var(--accent); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
+        .to-accent-secondary { --tw-gradient-to: var(--accent-secondary); }
+        .from-accent-secondary { --tw-gradient-from: var(--accent-secondary); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
+        .to-accent { --tw-gradient-to: var(--accent); }
+        .bg-clip-text { -webkit-background-clip: text; background-clip: text; }
+        .text-transparent { color: transparent; }
+        .from-transparent { --tw-gradient-from: transparent; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, transparent); }
+        .via-glass-border { --tw-gradient-stops: var(--tw-gradient-from), var(--glass-border), var(--tw-gradient-to, transparent); }
+        .to-transparent { --tw-gradient-to: transparent; }
+
+        /* 响应式 */
+        @media (min-width: 640px) {
+            .sm\:flex-row { flex-direction: row; }
+        }
+
+        @media (min-width: 768px) {
+            .md\:w-40 { width: 10rem; }
+            .md\:h-40 { height: 10rem; }
+            .md\:text-2xl { font-size: 1.5rem; }
+            .md\:text-3xl { font-size: 1.875rem; }
+            .md\:text-4xl { font-size: 2.25rem; }
+            .md\:text-5xl { font-size: 3rem; }
+            .md\:text-6xl { font-size: 3.75rem; }
+            .md\:p-12 { padding: 3rem; }
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:text-3xl { font-size: 1.875rem; }
+            .lg\:text-5xl { font-size: 3rem; }
+            .lg\:text-7xl { font-size: 4.5rem; }
+            .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
+        /* 过渡效果 */
+        .transition-all { transition: all 0.3s ease; }
+        .transition-transform { transition: transform 0.3s ease; }
+        .duration-300 { transition-duration: 300ms; }
+
+        /* 悬停效果 */
+        .hover\:scale-105:hover { transform: scale(1.05); }
+        .hover\:bg-glass-bg:hover { background: var(--glass-bg); }
+
+        /* 动画延迟 */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen relative overflow-hidden">
+        <!-- 背景粒子效果 -->
+        <div class="fixed inset-0 pointer-events-none">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- 主内容 -->
+        <div class="relative z-10 container mx-auto px-4 py-8">
+            <!-- 英雄区域 -->
+            <section class="min-h-screen flex items-center justify-center">
+                <div class="text-center max-w-4xl mx-auto">
+                    <!-- 头像 -->
+                    <div class="fade-in-up mb-8">
+                        <div class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full glass-card flex items-center justify-center pulse-animation overflow-hidden">
+                            <img src="wu.jpg" alt="吴泓锐头像" class="w-full h-full object-cover rounded-full" />
+                        </div>
+                    </div>
+
+                    <!-- 主标题 -->
+                    <div class="fade-in-up mb-8 delay-200">
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">
+                            吴泓锐
+                        </h1>
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-light text-foreground-secondary mb-6">
+                            SEO专家 · 数字营销顾问 · AI工具达人
+                        </h2>
+                        <p class="text-base md:text-lg text-foreground-muted max-w-2xl mx-auto leading-relaxed">
+                            10年+百度SEO推广经验，专注网站优化与网络运营，AI工具自媒体运营达人，全网粉丝15万+
+                        </p>
+                    </div>
+
+                    <!-- CTA按钮 -->
+                    <div class="fade-in-up flex flex-col sm:flex-row gap-4 justify-center delay-400">
+                        <button class="modern-button">
+                            <span>联系合作</span>
+                        </button>
+                        <button class="glass-card px-8 py-3 rounded-full hover:bg-glass-bg transition-all duration-300">
+                            <span>查看作品</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 专业技能区域 -->
+            <section class="py-20">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-in-left">
+                            专业技能
+                        </h2>
+                        <p class="text-lg text-foreground-secondary slide-in-right">
+                            深耕数字营销领域，助力企业数字化转型
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- 技能卡片1 -->
+                        <div class="glass-card p-8 text-center fade-in-up delay-100">
+                            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center text-white text-2xl font-bold">
+                                SEO
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">SEO推广优化</h3>
+                            <p class="text-foreground-secondary text-sm leading-relaxed">
+                                深度理解搜索引擎算法，擅长关键词策略、内容优化、技术SEO等全方位优化手段
+                            </p>
+                            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                                <span class="skill-tag">关键词策略</span>
+                                <span class="skill-tag">内容优化</span>
+                                <span class="skill-tag">技术SEO</span>
+                            </div>
+                        </div>
+
+                        <!-- 技能卡片2 -->
+                        <div class="glass-card p-8 text-center fade-in-up delay-200">
+                            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent-secondary to-accent flex items-center justify-center text-white text-2xl font-bold">
+                                运营
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">网络运营</h3>
+                            <p class="text-foreground-secondary text-sm leading-relaxed">
+                                具备完整的网络运营体系思维，从用户获取到转化的全链路运营经验
+                            </p>
+                            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                                <span class="skill-tag">用户增长</span>
+                                <span class="skill-tag">数据分析</span>
+                                <span class="skill-tag">转化优化</span>
+                            </div>
+                        </div>
+
+                        <!-- 技能卡片3 -->
+                        <div class="glass-card p-8 text-center fade-in-up delay-300">
+                            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center text-white text-2xl font-bold">
+                                设计
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">视觉设计</h3>
+                            <p class="text-foreground-secondary text-sm leading-relaxed">
+                                熟练掌握视觉设计与多媒体制作，为品牌传播提供优质的视觉内容支持
+                            </p>
+                            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                                <span class="skill-tag">图片美工</span>
+                                <span class="skill-tag">视频剪辑</span>
+                                <span class="skill-tag">品牌设计</span>
+                            </div>
+                        </div>
+
+                        <!-- 技能卡片4 -->
+                        <div class="glass-card p-8 text-center fade-in-up delay-400">
+                            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent-secondary to-accent flex items-center justify-center text-white text-2xl font-bold">
+                                AI
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">AI工具运营</h3>
+                            <p class="text-foreground-secondary text-sm leading-relaxed">
+                                前沿AI技术应用专家，全网粉丝近15万，深谙新媒体运营之道
+                            </p>
+                            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                                <span class="skill-tag">AI工具</span>
+                                <span class="skill-tag">自媒体</span>
+                                <span class="skill-tag">内容创作</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 成就统计 -->
+            <section class="py-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-card p-8 md:p-12">
+                        <div class="grid md:grid-cols-3 gap-8 text-center">
+                            <div class="fade-in-up delay-100">
+                                <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-2">
+                                    10+
+                                </div>
+                                <div class="text-foreground-secondary">年SEO经验</div>
+                            </div>
+                            <div class="fade-in-up delay-200">
+                                <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-2">
+                                    15W+
+                                </div>
+                                <div class="text-foreground-secondary">全网粉丝</div>
+                            </div>
+                            <div class="fade-in-up delay-300">
+                                <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-2">
+                                    100+
+                                </div>
+                                <div class="text-foreground-secondary">成功案例</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="py-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="fade-in-up mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">联系合作</h2>
+                        <p class="text-lg text-foreground-secondary">
+                            期待与您的合作交流，携手共创数字化未来
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                        <!-- 微信联系 -->
+                        <div class="glass-card p-8 text-center hover:scale-105 transition-transform duration-300 fade-in-up delay-100">
+                            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center text-white text-2xl font-bold">
+                                微信
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">微信联系</h3>
+                            <p class="text-2xl font-mono text-accent mb-2">wu1371236</p>
+                            <p class="text-sm text-foreground-muted">扫码或搜索添加微信</p>
+                        </div>
+
+                        <!-- 微信二维码 -->
+                        <div class="glass-card p-8 text-center hover:scale-105 transition-transform duration-300 fade-in-up delay-200">
+                            <div class="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden">
+                                <img src="weixing.png" alt="微信二维码" class="w-full h-full object-cover" />
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">扫码添加</h3>
+                            <p class="text-sm text-foreground-muted">扫描二维码快速添加微信</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 页脚 -->
+            <footer class="py-12 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <div class="h-px bg-gradient-to-r from-transparent via-glass-border to-transparent mb-8"></div>
+                    <p class="text-foreground-muted">
+                        © 2024 吴泓锐 · 专业为先 · 匠心独运
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // 添加交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为按钮添加点击效果
+            const buttons = document.querySelectorAll('.modern-button, .glass-card');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+
+            // 技能标签悬停效果
+            const skillTags = document.querySelectorAll('.skill-tag');
+            skillTags.forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.animationPlayState = 'paused';
+                });
+                tag.addEventListener('mouseleave', function() {
+                    this.style.animationPlayState = 'running';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
