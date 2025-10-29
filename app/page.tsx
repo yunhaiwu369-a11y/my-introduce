@@ -44,7 +44,7 @@ export default function Home() {
                 SEO专家 · 数字营销顾问 · AI工具达人
               </h2>
               <p className="text-base md:text-lg text-foreground-muted max-w-2xl mx-auto leading-relaxed">
-                10年+百度SEO推广经验，专注网站优化与网络运营，AI工具自媒体运营达人，全网粉丝15万+
+                10年+百度SEO推广经验，专注网站优化与网络运营，AI工具自媒体运营达人，全网粉丝近15万
               </p>
             </div>
 
@@ -134,34 +134,6 @@ export default function Home() {
                   <span className="skill-tag">AI工具应用</span>
                   <span className="skill-tag">自媒体运营</span>
                   <span className="skill-tag">内容创作</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 成就统计 */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-8 md:p-12">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="fade-in-up" style={{ animationDelay: '0.1s' }}>
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-2">
-                    10+
-                  </div>
-                  <div className="text-foreground-secondary">年SEO经验</div>
-                </div>
-                <div className="fade-in-up" style={{ animationDelay: '0.2s' }}>
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-2">
-                    15W+
-                  </div>
-                  <div className="text-foreground-secondary">全网粉丝</div>
-                </div>
-                <div className="fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent mb-2">
-                    100+
-                  </div>
-                  <div className="text-foreground-secondary">成功案例</div>
                 </div>
               </div>
             </div>
