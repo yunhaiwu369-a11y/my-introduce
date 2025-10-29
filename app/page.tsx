@@ -131,8 +131,8 @@ export default function Home() {
                   前沿AI技术应用专家，全网粉丝近15万，深谙新媒体运营之道
                 </p>
                 <div className="mt-6 flex flex-wrap justify-center gap-2">
-                  <span className="skill-tag">AI工具</span>
-                  <span className="skill-tag">自媒体</span>
+                  <span className="skill-tag">AI工具应用</span>
+                  <span className="skill-tag">自媒体运营</span>
                   <span className="skill-tag">内容创作</span>
                 </div>
               </div>
