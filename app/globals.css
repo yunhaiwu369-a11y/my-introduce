@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -15,21 +17,6 @@
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-background-secondary: var(--background-secondary);
-  --color-foreground: var(--foreground);
-  --color-foreground-secondary: var(--foreground-secondary);
-  --color-foreground-muted: var(--foreground-muted);
-  --color-accent: var(--accent);
-  --color-accent-secondary: var(--accent-secondary);
-  --color-card-bg: var(--card-bg);
-  --color-card-border: var(--card-border);
-  --color-glass-bg: var(--glass-bg);
-  --color-glass-border: var(--glass-border);
-  --font-inter: var(--font-inter);
-  --font-roboto: var(--font-roboto);
-}
 
 @media (prefers-color-scheme: light) {
   :root {
