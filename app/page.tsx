@@ -212,7 +212,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="h-px bg-gradient-to-r from-transparent via-glass-border to-transparent mb-8"></div>
             <p className="text-foreground-muted">
-              © 2024 吴泓锐 · 专业为先 · 匠心独运
+              © 2025 吴泓锐 · 专业为先 · 匠心独运
             </p>
           </div>
         </footer>
